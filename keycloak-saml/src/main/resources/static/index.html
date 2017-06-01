@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oauth github demo</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div>
+        <div class="header">
+            <span><a href="admin/index.html" target="_self">管理员权限</a></span>
+            <span><a href="/admin?GLO=true">log out</a></span>
+            <div style="background-color: antiquewhite;" id="current"></div>
+        </div>
+        <div>
+            <a href="session/main.html" target="_self">session 模块,不需要权限</a>
+        </div>
+    </div>
+</body>
+<script>
+    function refresh() {
+        $.get("/user", function (res) {
+            $("#current").html(JSON.stringify(res));
+        });
+    }
+    refresh();
+</script>
+</html>
