@@ -1,0 +1,127 @@
+{
+  "realm" : "core",
+  "users" : [ {
+    "id" : "11e412a7-50fe-453b-9d74-73f0f6cf4ade",
+    "createdTimestamp" : 1496469792891,
+    "username" : "admin",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "admin",
+    "lastName" : "root",
+    "email" : "yourwafer@qq.com",
+    "attributes" : {
+      "age" : [ "26" ]
+    },
+    "credentials" : [ {
+      "type" : "password",
+      "hashedSaltedValue" : "VA5DJ7yKHRJLB/EB7cNd05F7Lnp4Q/NVDPqeT7bKBGTJRgOSWMLin7654Wqt8xQ+BoXx/Pb9mmrE7s9cEAQUNQ==",
+      "salt" : "9XCpL/EDTEimWMKsFAyfEw==",
+      "hashIterations" : 20000,
+      "counter" : 0,
+      "algorithm" : "pbkdf2",
+      "digits" : 0,
+      "period" : 0,
+      "createdDate" : 1496469803454,
+      "config" : { }
+    } ],
+    "disableableCredentialTypes" : [ "password" ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "offline_access", "global_manager", "uma_authorization" ],
+    "clientRoles" : {
+      "openid-web" : [ "uma_protection" ],
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "groups" : [ "/anonymous" ]
+  }, {
+    "id" : "e5d493e8-6bf2-4613-85b0-eef82fb87634",
+    "createdTimestamp" : 1496304729029,
+    "username" : "guest",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "attributes" : {
+      "age" : [ "26" ]
+    },
+    "credentials" : [ {
+      "type" : "password",
+      "hashedSaltedValue" : "6YtUZOxhnWqFQgGj1ECVJwL+KSjvkjyrclSxk248HqKSwlokDZccwEa3Ooo9gecf2KN9Uhmmufeo4nlTAC4WCQ==",
+      "salt" : "mkUSPfT8Z/IU96z4qUZZhg==",
+      "hashIterations" : 20000,
+      "counter" : 0,
+      "algorithm" : "pbkdf2",
+      "digits" : 0,
+      "period" : 0,
+      "createdDate" : 1496304739943,
+      "config" : { }
+    } ],
+    "disableableCredentialTypes" : [ "password" ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "offline_access", "uma_authorization" ],
+    "clientRoles" : {
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "groups" : [ ]
+  }, {
+    "id" : "8ed3a369-b0d6-4422-8e7e-df39817b91df",
+    "createdTimestamp" : 1496304712009,
+    "username" : "manager",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "wei",
+    "lastName" : "wei",
+    "email" : "yourwafer@foxmail.com",
+    "attributes" : {
+      "age" : [ "25" ],
+      "saml.persistent.name.id.for.samlweb" : [ "G-ff1851b0-a6c2-4db7-a5be-cb73ee5caa81" ]
+    },
+    "credentials" : [ {
+      "type" : "password",
+      "hashedSaltedValue" : "6+KDEQf+91y/dcrJQDc/juVec8j55eFwgSPHDhOkGs9cQ4Mg73sGXf+sjvElXHBn2xUOPwttnw30EQkWtyx0Sg==",
+      "salt" : "nNsFUwzAZUjMza0MM0pFbw==",
+      "hashIterations" : 20000,
+      "counter" : 0,
+      "algorithm" : "pbkdf2",
+      "digits" : 0,
+      "period" : 0,
+      "createdDate" : 1496305246883,
+      "config" : { }
+    } ],
+    "disableableCredentialTypes" : [ "password" ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "offline_access", "global_manager", "uma_authorization" ],
+    "clientRoles" : {
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "clientConsents" : [ {
+      "clientId" : "samlweb",
+      "grantedProtocolMappers" : { },
+      "grantedRealmRoles" : [ "global_manager", "uma_authorization" ],
+      "grantedClientRoles" : {
+        "account" : [ "view-profile", "manage-account" ]
+      },
+      "createdDate" : 1496384827977,
+      "lastUpdatedDate" : 1496384827989
+    } ],
+    "groups" : [ "/anonymous" ]
+  }, {
+    "id" : "de303e67-95b1-4742-94f5-9de6347a5ef5",
+    "createdTimestamp" : 1496469503580,
+    "username" : "service-account-openid-web",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "email" : "service-account-openid-web@placeholder.org",
+    "serviceAccountClientId" : "openid-web",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "offline_access", "uma_authorization" ],
+    "clientRoles" : {
+      "openid-web" : [ "uma_protection" ],
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "groups" : [ ]
+  } ]
+}

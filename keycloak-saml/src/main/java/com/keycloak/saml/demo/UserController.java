@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
 
 @RestController
-@RequestMapping("core")
-public class CoreController {
+@RequestMapping("admin/core")
+public class UserController {
 
     @GetMapping
     public SamlPrincipal req(HttpServletRequest request){

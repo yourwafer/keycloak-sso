@@ -1,0 +1,11 @@
+description "use spring-boot-security to authenticate keycloak"
+
+dependencies {
+    compile group: 'org.keycloak', name: 'keycloak-authz-client', version: '3.1.0.Final'
+
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '1.5.1.RELEASE'
+
+    compile group: 'org.keycloak', name: 'keycloak-spring-security-adapter', version: '3.1.0.Final'
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}

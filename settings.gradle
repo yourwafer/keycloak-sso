@@ -1,1 +1,3 @@
 include 'keycloak-saml'
+include 'keycloak-springbootsecurity'
+include 'keycloak-backend-springbootsecurity'

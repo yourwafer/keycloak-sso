@@ -1,0 +1,7 @@
+{
+  "realm": "core",
+  "auth-server-url": "http://localhost:8081/auth",
+  "ssl-required": "external",
+  "resource": "openid-frontend",
+  "public-client": true
+}

@@ -1,0 +1,90 @@
+{
+  "name": "17high",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ThoughtWorksWuhanUI/17high.git",
+  "author": "ThoughtWorksWuhan",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^6.4.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-react-optimize": "^1.0.1",
+    "babel-preset-stage-0": "^6.22.0",
+    "css-loader": "^0.27.3",
+    "enzyme": "^2.7.1",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-loader": "^1.6.3",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "html-webpack-plugin": "^2.28.0",
+    "identity-obj-proxy": "^3.0.0",
+    "image-webpack-loader": "^3.2.0",
+    "jest": "^19.0.2",
+    "node-sass": "^4.5.0",
+    "postcss-loader": "^1.3.3",
+    "react-addons-test-utils": "^15.4.2",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.2.1",
+    "webpack-bundle-size-analyzer": "^2.6.0",
+    "webpack-dev-server": "^2.4.2",
+    "webpack-spritesmith": "^0.3.3"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.7.7",
+    "axios": "^0.15.3",
+    "classnames": "^2.2.5",
+    "echarts-for-react": "^1.2.1",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "normalize.css": "^6.0.0",
+    "react": "^15.4.2",
+    "react-datetime": "https://github.com/yourwafer/react-datetime.git#dd30e03",
+    "react-datetime-slot": "https://github.com/dandankity/react-datetime-slot.git#d5a211c",
+    "react-dom": "^15.4.2",
+    "react-fileupload": "^2.4.0",
+    "react-modal": "^1.7.3",
+    "react-popover": "^0.4.8",
+    "react-redux": "^5.0.3",
+    "react-router": "2.8.1",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.1",
+    "redux-promise-middleware": "^4.2.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start": "yarn clean-dist && webpack && webpack-dev-server --inline --hot",
+    "bundle": "webpack",
+    "clean-dist": "rm -rf public",
+    "server": "webpack-dev-server --port 7001",
+    "test": "jest --coverage",
+    "ci-test": "jest --coverage && nyc report --temp-directory=coverage --reporter=text-lcov | coveralls",
+    "eslint": "eslint src/**/*.jsx",
+    "csslint": "sass-lint",
+    "lint": "yarn eslint && yarn csslint"
+  },
+  "jest": {
+    "verbose": true,
+    "testPathDirs": [
+      "src/components"
+    ],
+    "unmockedModulePathPatterns": [
+      "node_modules/react/",
+      "node_modules/enzyme/"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy"
+    }
+  }
+}
