@@ -11,7 +11,8 @@
     "lastName" : "root",
     "email" : "yourwafer@qq.com",
     "attributes" : {
-      "age" : [ "26" ]
+      "age" : [ "26" ],
+      "grade" : [ "junior" ]
     },
     "credentials" : [ {
       "type" : "password",
@@ -29,9 +30,20 @@
     "requiredActions" : [ ],
     "realmRoles" : [ "offline_access", "global_manager", "uma_authorization" ],
     "clientRoles" : {
-      "openid-web" : [ "uma_protection" ],
+      "openid-web" : [ "uma_protection", "admin" ],
       "account" : [ "view-profile", "manage-account" ]
     },
+    "clientConsents" : [ {
+      "clientId" : "samlweb",
+      "grantedProtocolMappers" : { },
+      "grantedRealmRoles" : [ "global_manager", "uma_authorization" ],
+      "grantedClientRoles" : {
+        "openid-web" : [ "uma_protection", "admin" ],
+        "account" : [ "view-profile", "manage-account" ]
+      },
+      "createdDate" : 1496475905938,
+      "lastUpdatedDate" : 1496475905941
+    } ],
     "groups" : [ "/anonymous" ]
   }, {
     "id" : "e5d493e8-6bf2-4613-85b0-eef82fb87634",
@@ -73,8 +85,9 @@
     "lastName" : "wei",
     "email" : "yourwafer@foxmail.com",
     "attributes" : {
+      "saml.persistent.name.id.for.samlweb" : [ "G-ff1851b0-a6c2-4db7-a5be-cb73ee5caa81" ],
       "age" : [ "25" ],
-      "saml.persistent.name.id.for.samlweb" : [ "G-ff1851b0-a6c2-4db7-a5be-cb73ee5caa81" ]
+      "grade" : [ "senior" ]
     },
     "credentials" : [ {
       "type" : "password",
@@ -101,8 +114,8 @@
       "grantedClientRoles" : {
         "account" : [ "view-profile", "manage-account" ]
       },
-      "createdDate" : 1496384827977,
-      "lastUpdatedDate" : 1496384827989
+      "createdDate" : 1496475905967,
+      "lastUpdatedDate" : 1496475905969
     } ],
     "groups" : [ "/anonymous" ]
   }, {
