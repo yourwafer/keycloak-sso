@@ -68,7 +68,7 @@
     "start": "yarn clean-dist && webpack && webpack-dev-server --inline --hot",
     "bundle": "webpack",
     "clean-dist": "rm -rf public",
-    "server": "webpack-dev-server --port 7001",
+    "server": "yarn install && webpack-dev-server --port 7001",
     "test": "jest --coverage",
     "ci-test": "jest --coverage && nyc report --temp-directory=coverage --reporter=text-lcov | coveralls",
     "eslint": "eslint src/**/*.jsx",
