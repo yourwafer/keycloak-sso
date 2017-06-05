@@ -5,7 +5,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const BUILD_DIR = path.resolve(__dirname, 'public');
 const APP_DIR = path.resolve(__dirname, 'src');
 
-const extractCSS = new ExtractTextPlugin('styles.css');
 
 const config = {
   entry: `${APP_DIR}/index.jsx`,
@@ -38,9 +37,9 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-      inject: false,
+      inject: 'body',
     }),
-    extractCSS,
+    new ExtractTextPlugin("style.css")
   ],
 };
 

@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 public class UserController {
 
     @RequestMapping
-    @Secured("ROLE_ADMIN")
+    @Secured("ROLE_MANAGER")
     public Authentication getUserInfo(HttpServletRequest request, HttpServletResponse response) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if(authentication instanceof KeycloakAuthenticationToken) {

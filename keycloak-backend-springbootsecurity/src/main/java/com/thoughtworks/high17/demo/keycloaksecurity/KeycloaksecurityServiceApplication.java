@@ -7,9 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Created by hwwei on 2017/2/24.
  */
 @SpringBootApplication
-public class KeycloaksecurityApplication {
+public class KeycloaksecurityServiceApplication {
     public static void main(String[] args) {
-        SpringApplication.run(KeycloaksecurityApplication.class, args);
+        SpringApplication.run(KeycloaksecurityServiceApplication.class, args);
     }
 
 }

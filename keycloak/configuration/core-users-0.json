@@ -30,7 +30,8 @@
     "requiredActions" : [ ],
     "realmRoles" : [ "offline_access", "global_manager", "uma_authorization" ],
     "clientRoles" : {
-      "openid-web" : [ "uma_protection", "admin" ],
+      "broker" : [ "read-token" ],
+      "openid-web" : [ "manager" ],
       "account" : [ "view-profile", "manage-account" ]
     },
     "clientConsents" : [ {
@@ -38,11 +39,10 @@
       "grantedProtocolMappers" : { },
       "grantedRealmRoles" : [ "global_manager", "uma_authorization" ],
       "grantedClientRoles" : {
-        "openid-web" : [ "uma_protection", "admin" ],
         "account" : [ "view-profile", "manage-account" ]
       },
-      "createdDate" : 1496475905938,
-      "lastUpdatedDate" : 1496475905941
+      "createdDate" : 1496593348767,
+      "lastUpdatedDate" : 1496593348809
     } ],
     "groups" : [ "/anonymous" ]
   }, {
@@ -71,6 +71,30 @@
     "requiredActions" : [ ],
     "realmRoles" : [ "offline_access", "uma_authorization" ],
     "clientRoles" : {
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "groups" : [ ]
+  }, {
+    "id" : "81bdf263-8680-422e-bd4f-eb2e255b2c3c",
+    "createdTimestamp" : 1496652075537,
+    "username" : "hwwei@thoughtworks.com",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "Hongwei",
+    "lastName" : "Wei",
+    "email" : "hwwei@thoughtworks.com",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "federatedIdentities" : [ {
+      "identityProvider" : "google",
+      "userId" : "117914017725294278985",
+      "userName" : "hwwei@thoughtworks.com"
+    } ],
+    "realmRoles" : [ "offline_access", "uma_authorization" ],
+    "clientRoles" : {
+      "broker" : [ "read-token" ],
       "account" : [ "view-profile", "manage-account" ]
     },
     "groups" : [ ]
@@ -114,13 +138,13 @@
       "grantedClientRoles" : {
         "account" : [ "view-profile", "manage-account" ]
       },
-      "createdDate" : 1496475905967,
-      "lastUpdatedDate" : 1496475905969
+      "createdDate" : 1496593349094,
+      "lastUpdatedDate" : 1496593349116
     } ],
     "groups" : [ "/anonymous" ]
   }, {
-    "id" : "de303e67-95b1-4742-94f5-9de6347a5ef5",
-    "createdTimestamp" : 1496469503580,
+    "id" : "771ea0f0-dbff-4a71-afa6-4a038be41310",
+    "createdTimestamp" : 1496594142741,
     "username" : "service-account-openid-web",
     "enabled" : true,
     "totp" : false,
@@ -133,6 +157,30 @@
     "realmRoles" : [ "offline_access", "uma_authorization" ],
     "clientRoles" : {
       "openid-web" : [ "uma_protection" ],
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "groups" : [ ]
+  }, {
+    "id" : "44a667aa-e3dd-4bcc-931f-905931584d1d",
+    "createdTimestamp" : 1496651684325,
+    "username" : "yourwafer",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "wei",
+    "lastName" : "wei",
+    "email" : "yourwafer@sina.com",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "federatedIdentities" : [ {
+      "identityProvider" : "github",
+      "userId" : "5535122",
+      "userName" : "yourwafer"
+    } ],
+    "realmRoles" : [ "offline_access", "uma_authorization" ],
+    "clientRoles" : {
+      "broker" : [ "read-token" ],
       "account" : [ "view-profile", "manage-account" ]
     },
     "groups" : [ ]

@@ -1,0 +1,19 @@
+version: '2'
+services:
+  keycloak:
+    image: "jboss/keycloak:3.1.0.Final"
+    ports:
+     - "8081:8080"
+     - "9991:9990"
+    volumes:
+     - ./configuration:/var/tmp
+     - ./themes/core:/opt/jboss/keycloak/themes/core
+    environment:
+     - KEYCLOAK_USER=admin 
+     - KEYCLOAK_PASSWORD=admin
+    # entrypoint: /opt/jboss/docker-entrypoint.sh -b 0.0.0.0 -Dkeycloak.migration.action=import -Dkeycloak.migration.provider=dir -Dkeycloak.migration.dir=/var/tmp    
+    command:
+     - -b 0.0.0.0
+     - -Dkeycloak.migration.action=import
+     - -Dkeycloak.migration.provider=dir 
+     - -Dkeycloak.migration.dir=/var/tmp

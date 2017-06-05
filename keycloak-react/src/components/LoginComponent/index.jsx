@@ -1,13 +1,16 @@
-import Keycloak from "./keycloak";
-import config from "./keycloak.json";
-import React from "react";
-import $ from "jquery";
+import Keycloak from './keycloak';
+import config from './keycloak.json';
+import React from 'react';
+import $ from 'jquery';
+import style from './LoginComponent.scss';
+import classNames from 'classnames/bind';
+const cx = classNames.bind(style);
 
 var LoginComponent = React.createClass({
   getInitialState: function () {
     var that = this;
 
-    let states = {profile: {}, contacts: {}};
+    let states = { profile: {}, contacts: {} };
     var keycloakInitConfig = {};
     keycloakInitConfig.url = config['auth-server-url'];
     keycloakInitConfig.realm = config['realm'];
@@ -61,11 +64,10 @@ var LoginComponent = React.createClass({
     var that = this;
     $.ajax({
       type: "GET",
-      url: "http://localhost:7002/api/contracts",
+      url: "http://localhost:7002/user",
       crossDomain: true,
-      xhrFields: {cors: false},
+      xhrFields: { cors: false },
       headers: {
-        "Access-Control-Request-Headers": "x-requested-with, x-requested-by",
         "Authorization": "BEARER " + that.state.keycloak.token
       },
       error: function (a, b, c) {
@@ -82,23 +84,39 @@ var LoginComponent = React.createClass({
     return (
       <div>
         <div>
-          <h5>You're logged in as:</h5>
+          <div className={cx('menu-container')}>
+            <div className={cx('nav-item')}>
+              <a href='http://localhost:7000/index.html'>OpenId Connect Tradition Web(Springboot,Security):7000</a>
+            </div>
+            <div className={cx('nav-item')}>
+              <a href='http://localhost:7001/index.html'>Public Web(React, js adapter):7001</a>
+            </div>
+            <div className={cx('nav-item')}>
+              Public Service(Token):7002
+            </div>
+            <div className={cx('nav-item')}>
+              <a href='http://localhost:7003/index.html'>Saml Web(Spring,Filter):7003</a>
+            </div>
+          </div>
+          <div>
+            <h5>You're logged in as:</h5>
 
-          Id: {this.state.profile.id}
-          <p/>
-          Username: {this.state.profile.username}
-          <p/>
-          Email: {this.state.profile.email}
-          <p/>
-          Full Name: {this.state.profile.firstName} {this.state.profile.lastName}
-          <p/>
+            Id: {this.state.profile.id}
+            <p />
+            Username: {this.state.profile.username}
+            <p />
+            Email: {this.state.profile.email}
+            <p />
+            Full Name: {this.state.profile.firstName} {this.state.profile.lastName}
+            <p />
 
-          <button name="Logout" onClick={this.logout}>Logout</button>
+            <button name="Logout" onClick={this.logout}>Logout</button>
 
-          <button onClick={this.getContracts}>Contacts</button>
-          <ul>
-            {JSON.stringify(this.state.contacts)}
-          </ul>
+            <button onClick={this.getContracts}>Get User Authenticate By Token (http://localhost:7002)</button>
+            <ul>
+              {JSON.stringify(this.state.contacts)}
+            </ul>
+          </div>
         </div>
       </div>
     );
