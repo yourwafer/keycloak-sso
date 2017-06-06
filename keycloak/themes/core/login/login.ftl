@@ -41,22 +41,6 @@
 <div class="container">
     <div class="omb_login">
         <h3 class="omb_authTitle">Login or <a href="${url.registrationUrl}">Sign up</a></h3>
-        <div class="row omb_row-sm-offset-3 omb_socialButtons">
-            <#if realm.password && social.providers??>
-                <#list social.providers as p>
-                    <div class="col-xs-4 col-sm-2">
-                        <a href="${p.loginUrl}" class="button ${p.providerId}"><span><i class="fa fa-${p.providerId}"></i></span><p>${p.displayName}</p></a>
-                    </div>
-                </#list>
-            </#if>
-        </div>
-
-        <div class="row omb_row-sm-offset-3 omb_loginOr">
-            <div class="col-xs-12 col-sm-6">
-                <hr class="omb_hrOr">
-                <span class="omb_spanOr">or</span>
-            </div>
-        </div>
 
         <div class="row omb_row-sm-offset-3">
             <div class="col-xs-12 col-sm-6">
@@ -98,7 +82,7 @@
                         </#if>
                     </div>
 
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                    <button class="btn btn-lg btn-primary btn-block button-login" type="submit">Login</button>
                 </form>
                 <#if realm.resetPasswordAllowed>
                     <div>
@@ -108,6 +92,23 @@
                     </div>
                 </#if>
             </div>
+        </div>
+
+        <div class="row omb_row-sm-offset-3 omb_loginOr">
+            <div class="col-xs-12 col-sm-6">
+                <hr class="omb_hrOr">
+                <span class="omb_spanOr">or</span>
+            </div>
+        </div>
+
+        <div class="row omb_row-sm-offset-3 omb_socialButtons">
+            <#if realm.password && social.providers??>
+                <#list social.providers as p>
+                    <div class="col-xs-4 col-sm-2">
+                        <a href="${p.loginUrl}" class="button ${p.providerId}"><span><i class="fa fa-${p.providerId}"></i></span><p>${p.displayName}</p></a>
+                    </div>
+                </#list>
+            </#if>
         </div>
     </div>
 </div>

@@ -67,8 +67,8 @@ opacity:0.9;
 .button {
     border-radius: 5px;
     display: inline-block;
-    height: 40px;
-    line-height: 40px;
+    height: 30px;
+    line-height: 30px;
     padding-right: 30px;
     padding-left: 70px;
     position: relative;
@@ -100,7 +100,7 @@ opacity:0.9;
     left: 10px;
     top: 4px;
     width: 50px;
-    font-size:30px;
+    font-size:20px;
     -webkit-border-top-left-radius: 5px;
     -webkit-border-bottom-left-radius: 5px;
     -moz-border-radius-topleft: 5px;
@@ -122,6 +122,9 @@ opacity:0.9;
         text-align: right;
         margin-top:10px;
     }
+}
+.button-login {
+    margin-top:10px;
 }
 
 .form-gap {
