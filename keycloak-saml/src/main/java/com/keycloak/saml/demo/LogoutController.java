@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("logout")
 public class LogoutController {
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(method = {RequestMethod.POST, RequestMethod.GET})
     public String logout(HttpServletRequest request) throws ServletException {
         request.logout();
         return "redirect:/session/main.html";

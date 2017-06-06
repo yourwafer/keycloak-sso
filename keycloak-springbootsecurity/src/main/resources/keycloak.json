@@ -4,7 +4,7 @@
   "ssl-required": "external",
   "resource": "openid-web",
   "credentials": {
-    "secret": "dddad984-e28c-4a18-a390-9b311803e6d7"
+    "secret": "a5c01231-9e91-4990-ba5d-59e1976a19c7"
   },
   "use-resource-role-mappings": true,
   "policy-enforcer": {
